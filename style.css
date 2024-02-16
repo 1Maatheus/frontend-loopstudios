@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;1,300&display=swap");
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --dark-gray: #8c8c8c;
+  --very-dark-gray: #696969;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Resets */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+.header {
+  height: 650px;
+  position: relative;
+}
+
+.background-blur {
+  width: 100%;
+  height: 100%;
+  background: url(./images/desktop/image-hero.jpg) no-repeat center/cover;
+  position: absolute;
+  z-index: -1;
+}
+
+.background-blur::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.nav {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nav-list-item {
+  color: var(--white);
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+}
+
+.nav-list-item a {
+  padding: 0.57rem;
+  display: block;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.nav-list-item a:hover {
+  border-bottom: 2px solid var(--white);
+}
+
+.header-content {
+  max-width: 1440px;
+  margin: 5rem auto;
+}
+
+.header-content-text {
+  max-width: 650px;
+  border: 1px solid var(--white);
+  padding: 1rem 2rem;
+}
+
+.header-content-title {
+  color: var(--white);
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-weight: 300;
+}
+/* Header */
