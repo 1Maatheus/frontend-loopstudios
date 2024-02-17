@@ -216,3 +216,157 @@ a {
     font-size: 3rem;
   }
 } /* Header */
+
+/* Intro section */
+.intro-content {
+  max-width: 1440px;
+  margin: 10rem auto;
+}
+
+.intro-content-text {
+  display: flex;
+  position: relative;
+}
+
+.intro-text {
+  padding: 2rem 4rem;
+  padding-bottom: 0;
+  max-width: 650px;
+  position: absolute;
+  background-color: var(--white);
+  bottom: 4px;
+  right: 200px;
+}
+
+.intro-text-title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 2rem;
+  text-transform: uppercase;
+}
+
+.intro-text-paragraph {
+  padding-left: 2rem;
+  color: var(--dark-gray);
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 760px) {
+  .intro-content-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro-text {
+    right: 0;
+    bottom: 0;
+    position: initial;
+    padding: 0;
+  }
+
+  .intro-text-title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .intro-text-paragraph {
+    padding: 0 2rem;
+    text-align: center;
+  }
+
+  .intro-content-img {
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+  }
+} /* Intro section */
+
+/* Creations */
+.creations {
+  max-width: 1440px;
+  margin: 10rem auto;
+}
+
+.creations-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.creations-title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.btn-see {
+  font-family: "Alata", sans-serif;
+  background-color: transparent;
+  width: 210px;
+  height: 50px;
+  border: 2px solid var(--black);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-see:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.creations-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.creations-content-item {
+  transition: 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.creations-content-title {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  padding: 1rem 2rem;
+  text-wrap: wrap;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  max-width: 250px;
+  text-transform: uppercase;
+  color: var(--white);
+  z-index: 2;
+  transition: 0.2s ease;
+}
+
+.creations-content-item img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.creations-content-item::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  right: 0;
+  top: -4px;
+  z-index: 1;
+}
+
+.creations-content-item:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+/* Creations */
